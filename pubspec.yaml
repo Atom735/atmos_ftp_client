@@ -1,0 +1,15 @@
+name: atmos_ftp_client
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=2.14.4 <3.0.0"
+
+dependencies:
+  atmos_logger:
+    path: ../atmos_logger
+  path: ^1.8.0
+
+dev_dependencies:
+  atmos_lints:
+    path: ../atmos_lints
