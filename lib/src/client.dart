@@ -108,7 +108,7 @@ class FtpClient {
       code = r.key;
     }
 
-    if (code != 227) {
+    if (code != 227 && code != 27) {
       throw Exception('Failed to enter passive mode FTP-connections, '
           'IP for connect was not received');
     }
