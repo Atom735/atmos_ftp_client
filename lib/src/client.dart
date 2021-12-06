@@ -52,6 +52,7 @@ class FtpClient {
   }
 
   Future<void> quit() async {
+    if (_socket.closed) return;
     _socket.send('QUIT\r\n');
     final code = (await _socket.recive()).key;
     if (code != 221) {
